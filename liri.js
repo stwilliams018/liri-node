@@ -9,10 +9,12 @@ var fs = require('fs')
 
 
 var action = process.argv[2];
-var required =  process.argv[3];
+//var required =  process.argv[3];
+var required = process.argv.slice(3).join("+");
+//console.log(required1)
 
-
-switch (action) {
+function switcher(command){
+switch (command) {
     case "concert-this":
       concert();
       break;
@@ -29,11 +31,9 @@ switch (action) {
       dwis();
       break;
     }
+  }
+switcher(action)
 
-
-// on the concert info below I cannot get the correct data to pull. according to the diocumentation (and the example there) 
-//and the upcoming to the end should pull each event back but instead i just get artist info.  
-//I added that in my liri bot to show it works and also add in the corrct ones i would use. I plan to revisit this but wanted to get a submission in as these are already late
     function concert(){
       axios.get("https://rest.bandsintown.com/artists/" + required + "?app_id=codingbootcamp&date=upcoming").then(
         function(response) {
@@ -45,6 +45,7 @@ switch (action) {
           console.log("Show Tracker: " + response.data.upcoming_event_count);
           console.log(" ");
           console.log("-----------------------------------");
+          console.log(response);
         }
 
          // for (i =0, 1 < response.length, i++){
@@ -109,20 +110,18 @@ switch (action) {
    function dwis(){
     console.log("DWIS")
     fs.readFile("random.txt", "utf8", function(error, data) {
-
+      console.log("data", data);
+      var cleanData = data.split(",");
+      console.log(cleanData);
+      required = cleanData[1];
+      switcher(cleanData[0]);
+      
       if (error) {
         return console.log(error);
       }
       else{
 
       }})
-// I have not been able to determin the next steps for this ideally we  would 
-// return text data from file
-// determine which liri command it was applicable
-// run the function associated with the text from file as the 'required variable'
-// results would then be displayed as per liri functionality
-
-
     }
 
-    console.log(required)
+    
