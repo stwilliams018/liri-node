@@ -19,7 +19,7 @@
 ![Alt Text](Spotify-this-song.JPG)
 
 ### Do-What-I-Say user input is node liri.js do-what-i-say once complete movie results appear:
-#### Note: This command is not complete and is still under construction
-![Alt Text](Capture.JPG)
+### can alter the random txt file to have liri pull in what ever is listed in the file.
+![Alt Text]
 
 Link to GitHub Repository: 

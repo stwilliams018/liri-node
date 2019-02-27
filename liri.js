@@ -37,35 +37,22 @@ switcher(action)
     function concert(){
       axios.get("https://rest.bandsintown.com/artists/" + required + "?app_id=codingbootcamp&date=upcoming").then(
         function(response) {
+        console.log(response.data);
+
+         for (i =0; 1 < response.length; i++)
+         {
+
           console.log("-----------------------------------");
           console.log("          Concert Info               ");
           console.log(" ");
-          console.log("Artist: " + response.data.name);
-          console.log("Fan Tracker: " + response.data.tracker_count);
-          console.log("Show Tracker: " + response.data.upcoming_event_count);
+          console.log("Name of Venue: " + response.data[i].venue.name);
+          console.log("Venue Location: " + response.data[i].venue.city);
+          var formattedTime = moment(parsed[i].datetime, "YYYY-MM-DD HH:mm:ss").format("MM-DD-YYYY")
+          console.log("Date of Event: " + formattedTime);
           console.log(" ");
-          console.log("-----------------------------------");
-          console.log(response);
+          console.log("-----------------------------------"); 
         }
-
-         // for (i =0, 1 < response.length, i++){
-
-           // console.log("-----------------------------------");
-          //  console.log("          Concert Info               ");
-         //   console.log(" ");
-          //  console.log("Name of Venue: " + response.data[i].venue.name);
-          //  console.log("Venue Location: " + response.data[i].venue.city);
-          //  var formattedTime = moment(parsed[i].datetime, "YYYY-MM-DD HH:mm:ss").format("MM-DD-YYYY")
-         //   console.log("Date of Event: " + formattedTime);
-          //  console.log(" ");
-           // console.log("-----------------------------------"); 
-
-
-          //}
-     
-        
-        
-       ) }
+       })}
       
 
     function song(){
