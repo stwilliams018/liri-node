@@ -20,6 +20,6 @@
 
 ### Do-What-I-Say user input is node liri.js do-what-i-say once complete movie results appear:
 ### can alter the random txt file to have liri pull in what ever is listed in the file.
-![Alt Text]
+![Alt Text](Capture.JPG)
 
-Link to GitHub Repository: 
+Link to GitHub Repository: https://github.com/stwilliams018/liri-node.git
