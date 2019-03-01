@@ -19,7 +19,7 @@
 
 ### spotify-this-song: User input is node liri.js spotify-this-song <song name> once complete movie results appear:
 #### Also note that if no song is selected, Rippple will display
-![Alt Text](image/spotify.JPG)
+![Alt Text](images/spotify.JPG)
 
 ### do-what-it-says: User input is node liri.js do-what-i-say once complete movie results appear:
 ### The text file can be altered to have liri pull in what ever commands listed in the file.
