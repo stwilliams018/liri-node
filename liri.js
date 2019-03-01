@@ -35,11 +35,14 @@ switch (command) {
 switcher(action)
 
     function concert(){
-      axios.get("https://rest.bandsintown.com/artists/" + required + "?app_id=codingbootcamp&date=upcoming").then(
+      if(!required){
+        required = "Widespread Panic"
+      }
+      axios.get("https://rest.bandsintown.com/artists/" + required + "/events?app_id=codingbootcamp&date=upcoming").then(
         function(response) {
-        console.log(response.data);
+        //console.log(response.data);
 
-         for (i =0; 1 < response.length; i++)
+         for (i =0; i < response.data.length; i++)
          {
 
           console.log("-----------------------------------");
@@ -47,7 +50,7 @@ switcher(action)
           console.log(" ");
           console.log("Name of Venue: " + response.data[i].venue.name);
           console.log("Venue Location: " + response.data[i].venue.city);
-          var formattedTime = moment(parsed[i].datetime, "YYYY-MM-DD HH:mm:ss").format("MM-DD-YYYY")
+          var formattedTime = moment(response.data[i].datetime, "YYYY-MM-DD HH:mm:ss").format("MM-DD-YYYY");
           console.log("Date of Event: " + formattedTime);
           console.log(" ");
           console.log("-----------------------------------"); 
@@ -56,6 +59,9 @@ switcher(action)
       
 
     function song(){
+      if(!required){
+        required = "Ripple"
+      }
       spotify.search({
         type: 'track',
         query: required
@@ -74,6 +80,9 @@ switcher(action)
       )}
    
     function movie(){
+      if(!required){
+        required = "Cool Hand Luke"
+      }
       axios.get("http://www.omdbapi.com/?t="+ required + "&y=&plot=short&apikey=trilogy").then(
         function(response) {
           console.log("-----------------------------------");

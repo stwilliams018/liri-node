@@ -9,17 +9,20 @@
 
 ## Screen Shots of Terminal activity for each command
 
-### Movie-this user input is node liri.js movie-this <movie name> once complete movie results appear:
-![Alt Text](Movie-This.JPG)
+### movie-this: User input is node liri.js movie-this <movie name> once complete movie results appear:
+#### Also note that if no movie is selected, Cool Hand Luke will display
+![Alt Text](images/movie-this.JPG)
 
-### Concert-this user input is node liri.js concert-this <concert name> once complete movie results appear:
-![Alt Text](Concert-this.JPG)
+### concert-this: User input is node liri.js concert-this <concert name> once complete movie results appear:
+#### Also note that if no band is selected, Widespead Panic's tour will display 
+![Alt Text](images/concert-this.JPG)
 
-### Concert-this user input is node liri.js spotify-this-song <song name> once complete movie results appear:
-![Alt Text](Spotify-this-song.JPG)
+### spotify-this-song: User input is node liri.js spotify-this-song <song name> once complete movie results appear:
+#### Also note that if no song is selected, Rippple will display
+![Alt Text](image/spotify.JPG)
 
-### Do-What-I-Say user input is node liri.js do-what-i-say once complete movie results appear:
-### can alter the random txt file to have liri pull in what ever is listed in the file.
-![Alt Text](Capture.JPG)
+### do-what-it-says: User input is node liri.js do-what-i-say once complete movie results appear:
+### The text file can be altered to have liri pull in what ever commands listed in the file.
+![Alt Text](images/dwis.JPG)
 
 Link to GitHub Repository: https://github.com/stwilliams018/liri-node.git
